@@ -5,6 +5,8 @@ neckokunAPIはexeAuthorization等の<br>
 (専用apikeyは通常のユーザーには配布していません)
 
 # GET /api/antisub
+## 説明
+使われたipを取得します。<br><br>
 POST Header
 ```json
 {
@@ -33,8 +35,7 @@ RESPONSE Json (Failed)
 # POST /api/antisub
 
 ## 説明
-使われたipをサーバーに記憶します。<br>
-既に登録されているとエラーが返ってくるとサブと認定されてしまいます。
+使われたipをサーバーに記憶します。<br><br>
 POST Header
 ```json
 {
@@ -61,6 +62,10 @@ RESPONSE Json (Failed / ANTISUB)
 }
 ```
 # DELETE /api/antisub
+
+## 説明
+記録されていたIPをすべて削除します。<br>
+重大な処理のためpinコードを必要とします。<br><br>
 POST Header
 ```json
 {
